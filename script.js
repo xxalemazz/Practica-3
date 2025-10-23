@@ -20,11 +20,15 @@ async function Api() {
 
     const objetosDiv = document.querySelector(".objetos");
     objetosDiv.innerHTML = "<h3>Objetos:</h3>";
-    Datos.held_items.forEach(item => {
-        const p = document.createElement("p");
-        p.textContent = item.item.name;
-        objetosDiv.appendChild(p);
-    });
+    if(Datos.held_items.length === 0){
+        objetosDiv.innerHTML += "<p>No hay objetos</p>";
+    } else {
+        Datos.held_items.forEach(item => {
+            const p = document.createElement("p");
+            p.textContent = item.item.name;
+            objetosDiv.appendChild(p);
+        });
+    }
 
     const tiposDiv = document.querySelector(".Tipos");
     tiposDiv.innerHTML = "<h3>Tipos:</h3>";
@@ -46,4 +50,4 @@ async function Api() {
     enlacesDiv.innerHTML = `<p>Especie URL: <a href="${Datos.species.url}" target="_blank">${Datos.species.url}</a></p>`;
 }
 
-Api();
+document.addEventListener("DOMContentLoaded", Api);
