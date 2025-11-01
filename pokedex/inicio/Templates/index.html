@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemones</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <h1 class="titulo">Pokemones</h1>
+
+    <div class="contenedor-principal">
+        <div class="pokemon" id="charmander">
+            <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/004.png" alt="Charmander">
+            <div class="info" id="info-charmander"></div>
+        </div>
+
+        <div class="pokemon" id="bulbasaur">
+            <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png" alt="Bulbasaur">
+            <div class="info" id="info-bulbasaur"></div>
+        </div>
+
+        <div class="pokemon" id="pikachu">
+            <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/025.png" alt="Pikachu">
+            <div class="info" id="info-pikachu"></div>
+        </div>
+    </div>
+
+    <script src="{% static 'script.js' %}"></script>
+</body>
+</html>
